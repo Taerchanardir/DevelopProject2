@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Handy Apps: NoBrowser</title>
+</head>
+<body>
+    <div class="whole_page_container">
+        <div class="header_outer">
+            <div class="header_title">
+                NoBrowser
+            </div>
+            <div class="header_subheading">
+                Because you decide when your browser visits a website, and not some app that doesn't like being uninstalled
+            </div>
+            <div class="navbar_outer">
+                <div class="navbar_elements">
+                    <a href="nobrowser.exe">Download NoBrowser</a>
+                </div>
+                <div class="navbar_elements">
+                    <a href="index.html">Home</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle_outer">
+            <div class="middle_item_pair">
+                <div class="middle_item_txt">
+                    You know when you uninstall a 'free' program that didn't do what it advertised it could, and was full of 'please pay money for this feature' upsell bleating, how sometimes it will just open your web browser, without asking, to a page that demands you tell the publisher why you uninstalled their junk?.<br><br>
+
+                    Even if you have set your Windows firewall to block any program you have not yourself added to its 'allowed programs' list, any program can still 'phone home' using this sneaky browser trick.<br><br>
+
+                    Well, this tiny app will prevent such nonsense. It will stop any program opening your browser with a url that contains who-knows-what information about you or PC after the '?' on the url.<br><br>
+
+                    It works by registering itself to Windows as a web browser (a pretend one), so that Windows will show it as one of the choices of browser available.<br><br>
+
+                    Then when some impolite program asks windows to open some url, this small app opens instead, and copies the requested url to Windows's clipboard. You can then choose to open your browser yourself and paste the url (ctrl-V) to the browser address bar. Or you can ignore it.<br><br>
+
+                    The first time you run it you have to choose it as your chosen web browser on a Windows configuration page. You have to do this manually because Windows doesn't let any old program do it automatically because any old program used to do that rather too often. This app will automatically open the correct configuration page for you.<br><br>
+
+                    Chrome/Firefox/etc will of course shout 'I am not your default web browser! I am very important!'. Tough.<br><br>
+                    
+                </div>
+            </div>
+            
+            <div class="middle_item_pair">
+                <div class="middle_item_img">
+                    <img src="img/nobrowser_1_run_using_administrator.jpg">
+                </div>
+                <div class="middle_item_txt">
+                    To 'install', just make a new empty folder somewhere and copy the NoBrowser.exe file to it.<br><br>
+                    Don't use 'Program Files' though, unless you know how to get around Windows's protection of that folder.<br><br>
+                    Then, right-click NoBrowser.exe, and select 'Run as administrator'.<br><br>
+                    Windows should show a confirmation dialogue.<br><br>
+                    It needs to run as administrator because it adds an entry to the registry list of browsers.<br><br>
+                    If you don't run it as administrator you get an unhelpful error message that could be somewhat better.
+
+                </div>
+            </div>
+
+            <div class="middle_item_pair">
+                <div class="middle_item_img">
+                    <img src="img/nobrowser_2_first_popup_introduction_what_it_does.jpg">
+                </div>
+                <div class="middle_item_txt">
+                    Here is the message it shows when you first install it.<br><br>
+                    If you change your chosen web browser you can change it back to NoBrowser by repeating this process.
+                </div>
+            </div>
+            <div class="middle_item_pair">
+                <div class="middle_item_img">
+                    <img src="img/nobrowser_3_second_popup__it_has_registered_as_browser.jpg">
+                </div>
+                <div class="middle_item_txt">
+                    It tells you what will happen next.
+                </div>
+            </div>
+            <div class="middle_item_pair">
+                <div class="middle_item_img">
+                    <img src="img/nobrowser_4_windows_default_apps_before.jpg">
+                </div>
+                <div class="middle_item_txt">
+                    Windows's 'Default apps' page opens. Scroll down to the 'Web browser' part. Here you can see it is currently Google Chrome (for illustrative purposes).<br><br>
+                    Click the 'NoBrowser' entry. It won't be a green box though, that's my Windows explorer colour setting. This app is too cheap to have it's own icon.
+                </div>
+            </div>
+            <div class="middle_item_pair">
+                <div class="middle_item_img">
+                    <img src="img/nobrowser_5_windows_default_apps_after.jpg">
+                </div>
+                <div class="middle_item_txt">
+                    Here it is set as the current browser.
+                </div>
+            </div>
+            <div class="middle_item_pair">
+                <div class="middle_item_img">
+                    <img src="img/nobrowser_6_intercepting_a_browser_open_attempt.jpg">
+                </div>
+                <div class="middle_item_txt">
+                    And this is what happens when a program tries to open a page on your browser.<br><br>
+                    In this case it was me clicking a link in discord. It's a cat video.<br><br>
+                    The requested url will have been copied to the Windows clipboard. You can open it in a web browser by pasting it into the its address bar. (ctrl-V, or right click > paste).
+                </div>
+            </div>
+       
+
+        </div>
+    </div>
+</body>
+</html>

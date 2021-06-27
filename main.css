@@ -1,112 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 /*@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:900');*/
 
+a:link {
+    color: #C0C0E0;
+    text-decoration: underline;
+}
+a:visited {
+    color: #e0c0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color:white;
+    background: #404060;
+    text-decoration: underline;
+}
+
+/* what is 'active?'
+a:active {
+    color: red;
+}
+*/
+
 * {
     box-sizing: border-box;
 }
 
+/* there is a white border around the whole page who's cause I can't find */
+/* it makes the page have a vertical scroll bar even when the browser window is large enough for all the content*/
 .whole_page_container {
     display: flex;
-    /* from https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-    /* This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children. */
-    /* ...'Direct children means just the 1st level of children not the children of children.... if I remove 'display: flex' from all the children then the display layout changes */
-    /*min-height: 100vh;*/ /* Viewport Height */
-    /*max-height: 100vh;*/
-    height: 100vh; /* using 100% instead of vh100 doesn't work */
+    min-height: 100vh;
+    /*height: 95vh; ugly failed hack to kill the mystery white border*/
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    color:darkseagreen;
-    background:chocolate;
+    color: white;
+    background: #202040;
 }
- /* what makes these three 'outer's behave differently? */
- /* it's just one of them having a 'flex: 1;' */
- /* it is doing what I want now with just the middle box having a 'flex 1' and the other's not, but I'm not sure if it should be done this way */
+
+/*-----------------------------------------------------------------------*/
+
 .header_outer {
     display: flex;
     flex-direction: column; /* want items to be vertical*/
-    background: #0000ff;
     text-align: center;
     width: 100%;
-    padding:6px;
+    padding:4px;
     justify-content: flex-start;
-    /*flex: auto; this makes header_title_outer become huge height, much larger than it's text */
-}
-
-.middle_outer {
-    display: flex;
-    flex-direction: column;
-    background: #4000a0;
-    /*text-align: center;*/
-    width: 100%;
-    padding:15px;
-    justify-content: flex-start;
-    /*flex: 1; */
-    flex: auto; /* recommended by https://hacks.mozilla.org/2013/12/application-layout-with-css3-flexible-box-module/ */
-}
-
-.footer_outer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-     /* two areas at either end*/
-    background:cornflowerblue;
-    padding: 15px;
-    /*min-height: 40px;*/
-    /* the bottom border of the left items is cut off, the bottom border of the whole container is cut off*/
-    /* there is a white border around the whole page, that isn't the whole_page_container colour, but it isn't present at the bottom edge */
-}
-
-  
-.header_title_outer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex: 1; /* not flex-grow */
-    background:grey;
 }
 
 .header_title {
     display: flex;
     justify-content: center;
-     /* centers the text in the box, does not centre the box in the parent*/
-     /* adding 2 padding boxes to left and right made it centre, but removing those boxes left it still centered instead of it reverting??? */
-    background:#018181;
-    color: #88ff00;
-    font-size: 40px;
-    padding: 15px;
-    width: 80%;
-    min-height: 20px;
+    font-size: 50px;
+    padding: 8px;
 }
 
-/*--------------------------------*/
+.header_subheading {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    padding: 4px;
+}
 
 .navbar_outer {
     display: flex;
-    background: #a08000;
-    min-height: 30px;
     flex-direction: row;
-    color: #00a0ff;
-    border: 2px solid red;
-    border-radius: 5px;
+    color: #c0c0e0;
     justify-content: flex-end;
-    /*padding: 15px;*/
 }
 
 .navbar_elements {
-    padding: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.navbar_element1 {
-    background: #804000;
-}
-.navbar_element2 {
-    background: #806000;
-}
 
 /* ------------------------------------------------ */
+.middle_outer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:10px;
+    justify-content: flex-start;
+    flex: auto; /* recommended by https://hacks.mozilla.org/2013/12/application-layout-with-css3-flexible-box-module/ */
+}
 
+.middle_item_pair {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.middle_item_img {
+    display: flex;
+    padding: 10px;
+}
+
+.middle_item_txt {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 30%;
+}
+
+
+/* ------------------------------------------------ */
+/* unused
+.footer_outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background:cornflowerblue;
+    padding: 15px;
+}
 
 .footer_left {
     display: flex;
@@ -140,4 +149,5 @@
     padding-right: 40px;
     background:firebrick
 }
+*/
 
